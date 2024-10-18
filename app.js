@@ -9,10 +9,10 @@ dotenv.config({ path: './config.env' });
 require('./db.js');
 
 //Middleware to change the user's data into Javascript Object
-app.use(express.json());
+app.use(bodyparser.json({extended:true}));
 
 //Require the Routers
-require('./router/auth.js');
+app.use(require('./router/auth.js'));
 
 //Listening to PORT
 app.listen(5000,()=>{

@@ -14,5 +14,5 @@ const hashPassword=async(password)=>{
 }
 
 module.exports={
-    hashPassword
+    hashPassword:hashPassword
 }
